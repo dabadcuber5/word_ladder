@@ -40,7 +40,7 @@ def word_ladder(start_word, end_word, dictionary_file='words5.dict'):
     word_stack.append(start_word)
     word_queue = deque()
     word_queue.append(word_stack)
-    while(len(word_queue) != 0):
+    while len(word_queue) != 0:
         word_temp_stack = word_queue.popleft()
         for word in list(word_list):
             if _adjacent(word_temp_stack[-1], word):
